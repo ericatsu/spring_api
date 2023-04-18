@@ -17,6 +17,6 @@ public class SpringApiApplication {
 
 	@GetMapping("/")
 	public List<String> hello() {
-		return List.of("Hello" , "World");
+		return List.of("Hello" , "World", "Testing");
 	}
 }
