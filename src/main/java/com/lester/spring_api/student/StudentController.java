@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "api/v1/student")
 public class StudentController {
 
-    @GetMapping("/")
+    @GetMapping
     public List<Student> getStudents() {
         return List.of(
                 new Student(1L, "Eric", "eric@gmail.com", LocalDate.of(1999, Month.SEPTEMBER, 03), 23));
