@@ -12,6 +12,13 @@ public class StudentService {
     @GetMapping
     public List<Student> getStudents() {
         return List.of(
-                new Student(1L, "Eric", "eric@gmail.com", LocalDate.of(1999, Month.SEPTEMBER, 03), 23));
+                new Student(
+                    1L, 
+                    "Eric", 
+                    "eric@gmail.com", 
+                    LocalDate.of(1999, Month.SEPTEMBER, 03), 
+                    23
+                )
+            );
     }
 }
