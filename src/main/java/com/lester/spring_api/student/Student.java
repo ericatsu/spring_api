@@ -28,17 +28,12 @@ public class Student {
     private LocalDate dob;
     private Integer age;
 
-    public Student(
-        Long id, 
-        String name, 
-        String email, 
-        LocalDate dob, 
-        Integer age) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.dob = dob;
-        this.age = age;
+    public Student() {
+        this.id = 0L;
+        this.name = "";
+        this.age = 0;
+        this.dob = LocalDate.now();
+        this.email = "";
     }
 
     public Student(
