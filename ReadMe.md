@@ -20,16 +20,19 @@ psql -U postgres
 ```
 
 5. Create a new database:
+
 ```
 CREATE DATABASE student;
 ```
 
 6. Connect to the new database:
+
 ```
 \c student
 ```
 
 7. Create a new table:
+
 ```
 CREATE TABLE student (
   id SERIAL PRIMARY KEY,
@@ -44,11 +47,13 @@ CREATE TABLE student (
 ```
 
 8. Grant access to the database:
+
 ```
 GRANT ALL PRIVILEGES ON DATABASE student TO User;
 ```
 
 9. Populate the table with sample data:
+
 ```
 INSERT INTO student (first_name, last_name, email, phone, address, date_of_birth, date_of_enrollment)
 VALUES ('John', 'Doe', 'johndoe@example.com', '555-1234', '123 Main St, Anytown USA', '1990-01-01', '2020-09-01'),
@@ -57,11 +62,9 @@ VALUES ('John', 'Doe', 'johndoe@example.com', '555-1234', '123 Main St, Anytown 
 ```
 
 # Usage
+
 You can now use this database to store and manage student information. Use SQL queries to perform CRUD (Create, Read, Update, Delete) operations on the student table.
 
 # Contributing
+
 Feel free to contribute to this project by submitting pull requests or opening issues.
-
-
-
-
