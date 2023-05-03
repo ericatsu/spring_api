@@ -23,7 +23,7 @@ public class StudentController {
     }
 
     //Add new students
-    @PostMapping(consumes = "text/plain;charset=UTF-8")
+    @PostMapping(consumes = "application/json")
     public void registerNewStudent(@RequestBody Student student){
         studentService.addNewStudent(student);
     }
