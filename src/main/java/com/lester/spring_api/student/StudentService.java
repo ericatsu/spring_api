@@ -32,7 +32,6 @@ public class StudentService {
             try {
                 throw new IllegalAccessException("student with id" + studentId + "does not exist");
             } catch (IllegalAccessException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
