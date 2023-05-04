@@ -18,6 +18,6 @@ public class StudentService {
 
     
     public void addNewStudent(Student student) {
-        System.out.println(student);
+        studentRepository.save(student);
     }
 }
