@@ -1,4 +1,5 @@
 package com.lester.spring_api.student;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,7 +38,7 @@ public class StudentService {
     }
 
     @Transactional
-    public void updateStudent(Long studentId, String name, String email) throws IllegalAccessException {
+    public void updateStudent(Long studentId, String name, String email, LocalDate dob) throws IllegalAccessException {
         Student student = studentRepository.findById(studentId).orElseThrow(() -> new IllegalAccessException("student with id" +  studentId  + "does not exist"));
 
         if (name != null && name.length() > 0 && !Objects.equals(student.getName(), name)) {
@@ -50,6 +51,10 @@ public class StudentService {
                 throw new IllegalStateException("email taken");
             }
             studentRepository.save(student); 
+        }
+
+        if (dob != null && !Objects.equals(student.getDob(), dob)) {
+            student.setDob(dob);
         }
     }
 
