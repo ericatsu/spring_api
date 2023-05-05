@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.persistence.PostUpdate;
-
 @RestController
 @RequestMapping(path = "api/v1/student")
 public class StudentController {
@@ -24,6 +22,7 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    // Get All Students
     @GetMapping
     public List<Student> getStudents() {
         return studentService.getStudents();
@@ -35,11 +34,13 @@ public class StudentController {
         studentService.addNewStudent(student);
     }
 
+    // Delete Student
     @DeleteMapping(path = "{studentId}")
     public void deleteStudent(@PathVariable("studentId") Long studentId) throws IllegalAccessException {
         studentService.deleteStudent(studentId);
     }
 
+    //Update Student
     @PutMapping(path = "{studentId}")
     public void updateStudent(
             @PathVariable("studentId") Long studentId,
