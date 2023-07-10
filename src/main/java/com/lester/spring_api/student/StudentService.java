@@ -56,7 +56,5 @@ public class StudentService {
         if (dob != null && !Objects.equals(student.getDob(), dob)) {
             student.setDob(dob);
         }
-    }
-
-    
+    }   
 }
